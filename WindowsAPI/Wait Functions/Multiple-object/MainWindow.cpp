@@ -2,7 +2,6 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QMessageBox>
-#include "WinUser.h"
 
 TestThread::TestThread(HANDLE event):
     m_event(event)

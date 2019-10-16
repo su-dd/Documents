@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QThread>
-#include "Windows.h"
+#include "windows.h"
 
 class TestThread : public QThread
 {
@@ -19,7 +19,7 @@ class MainForm : public QMainWindow
 {
     Q_OBJECT
 public:
-    MainForm(QWidget *parent = 0);
+    MainForm(QWidget *parent = nullptr);
     ~MainForm();
 private:
     void onTest1();
