@@ -2,14 +2,19 @@
 创建库 : git init
 
 连接远程库： git remote add origin git@gitee.com:xxxxx/xxxxxx.git
+
 删除本地连接： git remote rm origin
+
 修改本地连接： git remote set-url origin git@gitee.com:xxxxx/xxxxxx.git
 
 克隆： git clone git@gitee.com:xxxxx/xxxxxx.git
 
 提交： git commit
+
       -a : 提交所有改动
+
       -m : 加入log信息
+
       -v : 查看差异
 
       git commit -am  "xxxx"   加注释,
