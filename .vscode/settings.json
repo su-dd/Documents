@@ -44,5 +44,7 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}\\CMake\\4.多个文件夹",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }

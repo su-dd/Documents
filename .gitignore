@@ -1,1 +1,11 @@
-CMake/2.HelloWorld/build/
+CMakeFiles/
+build/
+Debug/
+*.vcxproj
+*.vcxproj.filters
+*.exe
+*.ilk
+*.pdb
+*.cmake
+*.sln
+CMakeCache.txt
