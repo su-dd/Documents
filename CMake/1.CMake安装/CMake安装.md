@@ -28,3 +28,9 @@ sudo make install
 ```
 cmake --version
 ```
+
+# Windows上的安装
+
+下载地址 : https://cmake.org/download/
+
+
