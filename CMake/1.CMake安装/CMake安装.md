@@ -33,4 +33,4 @@ cmake --version
 
 下载地址 : https://cmake.org/download/
 
-
+安装完成后记得添加Path路径
