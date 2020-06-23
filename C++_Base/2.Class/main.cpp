@@ -1,12 +1,15 @@
+#include <QCoreApplication>
 #include <iostream>
 #include <stdio.h>
 #include <limits>
-
+#include <QString>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
+    QCoreApplication a(argc, argv);
     /* code */
+//    cout.imbue(locale("chs"));
     cout << "short size : " << sizeof(short)
          << "\t 最大值：" << (numeric_limits<short>::max)()
          << "\t 最小值：" << (numeric_limits<short>::min)() << endl;
@@ -55,5 +58,5 @@ int main(int argc, char const *argv[])
          << "\t最大值：" << (numeric_limits<long double>::max)()
          << "\t最小值：" << (numeric_limits<long double>::min)() << endl;
 
-    return 0;
+    return a.exec();
 }
