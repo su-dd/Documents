@@ -1,5 +1,6 @@
-package _01_Class.demo05;
+package _01_Class.PropertyClass;
 
+// 成员内部类
 public class Person {
     private boolean live;
 

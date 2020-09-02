@@ -1,4 +1,4 @@
-package _01_Class.demo06;
+package _01_Class.StackClass;
 
 public interface Eat {
     public abstract void eat();

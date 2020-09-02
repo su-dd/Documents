@@ -1,7 +1,7 @@
 package _01_Class.demo04.impl;
 
 import _01_Class.demo04.Animal;
-//demo04.impl.Demo
+
 public class Demo {
     public static void main(String[] args) {
         Animal animal = new Tiger();

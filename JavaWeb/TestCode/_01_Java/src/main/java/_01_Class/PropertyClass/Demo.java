@@ -1,4 +1,4 @@
-package _01_Class.demo05;
+package _01_Class.PropertyClass;
 
 public class Demo {
     public static void main(String[] args) {
