@@ -50,8 +50,9 @@ yarn-error.log*
 # 处理希望添加空文件夹
 .gitkeep
 
-# 处理Java Spring 工程变成出的target文件夹
-/tagget/
+# 处理Java Spring 工程变成出的target文件夹的.class文件
+target/
+*.class
 
 # Editor directories and files
 .idea
@@ -66,3 +67,4 @@ yarn-error.log*
 *.pdb
 *.cmake
 *.sln
+
