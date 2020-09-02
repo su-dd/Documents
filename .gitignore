@@ -47,8 +47,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
+# 处理希望添加空文件夹
 .gitkeep
+
+# 处理Java Spring 工程变成出的target文件夹
+/tagget/
 
 # Editor directories and files
 .idea
