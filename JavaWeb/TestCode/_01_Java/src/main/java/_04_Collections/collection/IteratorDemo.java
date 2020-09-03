@@ -14,7 +14,7 @@ public class IteratorDemo {
         c.add("java");
         c.add("javaee");
 
-        //lterator<E> iterator():返回此集合中兀素的迭代器,通过集合的iterator()方法得到
+        // Iterator<E> iterator():返回此集合中兀素的迭代器,通过集合的iterator()方法得到
         Iterator<String> it = c.iterator();
 
         //用whi1e循环改进元素的判師口获取
