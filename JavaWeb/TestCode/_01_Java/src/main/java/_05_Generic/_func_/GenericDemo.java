@@ -1,8 +1,8 @@
-package _05_Generic;
+package _05_Generic._func_;
 
-public class GenericFuncDemo {
+public class GenericDemo {
     public static void main(String[] args) {
-        GenericFunc g = new GenericFunc();
+        Generic g = new Generic();
         g.show("林青霞");
         g.show(30);
         g.show(true);

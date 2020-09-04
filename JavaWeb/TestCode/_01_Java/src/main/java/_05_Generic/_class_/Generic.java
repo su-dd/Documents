@@ -1,4 +1,4 @@
-package _05_Generic;
+package _05_Generic._class_;
 
 public class Generic<T> {
     private T t;

@@ -1,6 +1,6 @@
-package _05_Generic;
+package _05_Generic._func_;
 
-public class GenericFunc {
+public class Generic {
     public <T> void show(T t) {
         System.out.println(t);
     }
