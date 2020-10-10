@@ -10,17 +10,25 @@
 <!--    </bean>-->
 
 <!--  自动装配模式’byName’  -->
+<!--  有构造函数不可以通过byName装配  -->
 <!--    <bean id="textEditor" class="com.test.autoWiring.TextEditor" autowire="byName">-->
 <!--        <property name="name" value="Generic Text Editor"></property>-->
 <!--    </bean>-->
 
-<!--  自动装配模式’byType’  -->
+    <!--  自动装配模式’byType’  -->
+    <!--  有构造函数不可以通过byType装配  -->
 <!--    <bean id="textEditor" class="com.test.autoWiring.TextEditor" autowire="byType">-->
 <!--        <property name="name" value="Generic Text Editor"></property>-->
 <!--    </bean>-->
 
-    <bean id="textEditor" class="com.test.autoWiring.TextEditor" autowire="byType">
-        <property name="name" value="Generic Text Editor"></property>
+<!--  通过构造函数的基本方式  -->
+<!--    <bean id="textEditor" class="com.test.autoWiring.TextEditor">-->
+<!--        <constructor-arg ref="spellChecker" />-->
+<!--        <constructor-arg value="Generic Text Editor" />-->
+<!--    </bean>-->
+
+    <bean id="textEditor" class="com.test.autoWiring.TextEditor" autowire="constructor">
+        <constructor-arg value="Generic Text Editor" />
     </bean>
 
     <bean id="spellChecker" class="com.test.autoWiring.SpellChecker"></bean>
