@@ -6,7 +6,6 @@ public class Student {
     private Integer age;
     private String name;
 
-    @Required
     public Integer getAge() {
         return age;
     }
