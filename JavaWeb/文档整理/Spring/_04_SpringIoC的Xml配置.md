@@ -132,9 +132,7 @@ destroy-method：指定类中销毁方法名称
      <bean id="dynamicFactoryBean" class="com.study.instantiation.DynamicFactoryBean"/>
      <bean id="dynamicFactorySchool" factory-bean="dynamicFactoryBean" factory-method="createSchool"/>
      ```
-```
-     
-     
+
 
 ## 3 SpringBean依赖注入
 
@@ -156,7 +154,7 @@ destroy-method：指定类中销毁方法名称
 
 **XmlDemo:**
 
-​```xml
+```xml
 <bean id="information112" class="com.study.injection.Information">
     <constructor-arg name="phoneNum" value="112"/>
 </bean>
@@ -197,8 +195,6 @@ destroy-method：指定类中销毁方法名称
 </bean>
 ```
 
-
-
 ### 3.3 P命名空间注入
 
 beans标签增加属性引用P命名空间  `xmlns:p="http://www.springframework.org/schema/p"`
@@ -235,17 +231,73 @@ P命名空间的本质也是Set方法注入，所以注意点也同Set方法注�
 
 **List集合：**
 
+标签：list
+
+**XmlDemo:**
+
+```xml
+<property name="studentNames">
+    <list>
+        <value>小红</value>
+        <value>小明</value>
+        <value>小芳</value>
+        <value>小王</value>
+    </list>
+</property>
+<property name="mathClass">
+    <list>
+        <bean id="studentXiaoWang" class="com.study.injection.Student" p:name="小王" p:age="17" p:information-ref="information112"/>
+        <ref bean="studentXiaoMing"/>
+    </list>
+</property>
+```
+
 
 
 **Map集合：**
+
+标签：map
+
+**XmlDemo：**
+
+```xml
+<property name="studentMap">
+    <map>
+        <entry key="小明" value-ref="studentXiaoMing"/>
+        <entry key="小红" value-ref="studentXiaoHong"/>
+        <entry key="小芳" value-ref="studentXiaoFang"/>
+        <entry key="小王" value-ref="studentXiaoWang"/>
+    </map>
+</property>
+```
 
 
 
 **Properties：**
 
+标签：props
+
+**XmlDemo：**
+
+```xml
+<property name="classTeacher">
+	<props>
+    	<prop key="math">大王</prop>
+        <prop key="chinese">大明</prop>
+        <prop key="english">大芳</prop>
+    </props>
+</property>
+```
+
 
 
 ## 4引入其他配置文件
+
+使用import导入
+
+```xml
+<import resource="appliactionContext-Student.xml"/>
+```
 
 
 

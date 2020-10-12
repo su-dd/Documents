@@ -53,6 +53,7 @@ yarn-error.log*
 # 处理Java Spring 工程变成出的target文件夹的.class文件
 target/
 *.class
+*.iml
 
 # Editor directories and files
 .idea

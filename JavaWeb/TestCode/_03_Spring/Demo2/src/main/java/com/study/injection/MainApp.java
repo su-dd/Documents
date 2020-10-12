@@ -1,6 +1,5 @@
 package com.study.injection;
 
-import com.study.instantiation.School;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +13,7 @@ public class MainApp {
         Student studentXiaoHong = (Student) applicationContext.getBean("studentXiaoHong");
         System.out.println(studentXiaoHong.toString());
 
-
+        School school = (School)applicationContext.getBean("school");
+        System.out.println(school.toString());
     }
 }
