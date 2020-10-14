@@ -6,5 +6,5 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--  组价扫描  -->
-    <context:component-scan base-package="com.study"/>
+    <context:component-scan base-package="com.study.instantiation"/>
 </beans>

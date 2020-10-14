@@ -15,9 +15,7 @@ public class School {
     // 学生表
     private Map<String, Student> studentMap;
 
-    //
     private Properties classTeacher;
-
 
     public String getName() {
         return name;

@@ -1,8 +1,18 @@
 package com.study.injection;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
+
+@Repository("student")
 public class Student {
+    @Value("小明")
     private String name;
+    @Value("16")
     private int age;
+    @Autowired
+    //@Qualifier("information")
     private Information information;
 
     public Student() {
