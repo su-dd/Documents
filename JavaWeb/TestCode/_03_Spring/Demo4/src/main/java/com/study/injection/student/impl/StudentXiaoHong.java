@@ -1,28 +1,29 @@
-package com.study.injection;
+package com.study.injection.student.impl;
 
+import com.study.injection.info.Information;
+import com.study.injection.info.impl.Information110;
+import com.study.injection.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Controller;
 
-@Repository("student")
-public class Student {
-    @Value("小明")
+import javax.annotation.Resource;
+
+@Controller("studentXiaoHong")
+public class StudentXiaoHong implements Student {
+
+    @Value("小红")
     private String name;
-    @Value("16")
+
+    @Value("15")
     private int age;
-    @Autowired
-    //@Qualifier("information")
+
+    //@Autowired
+    //@Qualifier("information110")
+    @Resource(name = "information110")
+    //@Resource(type = com.study.injection.info.impl.Information112.class)
     private Information information;
-
-    public Student() {
-    }
-
-    public Student(String name, int age, Information information) {
-        this.name = name;
-        this.age = age;
-        this.information = information;
-    }
 
     public String getName() {
         return name;
@@ -50,10 +51,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentXiaoHong{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", " + information.toString() +
+                ", information=" + information.info() +
                 '}';
     }
 }
