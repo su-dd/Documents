@@ -1,5 +1,7 @@
 package com.study.aop;
 
+import com.study.aop.imp.StudentAspect;
+import org.aspectj.lang.annotation.DeclareParents;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,9 +11,6 @@ public class MainApp {
 
         Student student = (Student)applicationContext.getBean("student");
         student.study("语文", "大王");
-        System.out.println("");
-
-        student.study("数学", "大芳");
         System.out.println("");
 
         People people = (People)student;
