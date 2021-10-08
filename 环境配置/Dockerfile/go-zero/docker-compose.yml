@@ -1,0 +1,24 @@
+# yaml 配置
+version: "3" # 版本号
+services: # 服务
+  mysql: # mysql容器
+    container_name: mysql_docker
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./mysql/mysql.env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+    volumes:
+      - "${MYSQL_DIR}/data:/var/lib/mysql" # 挂载数据目录
+      - "${MYSQL_DIR}/config:/etc/mysql/conf.d" # 挂载配置文件目录
+
+  redis:
+    container_name: redis_docker
+    image: redis:alpine
+
+  etcd:
+    container_name: etcd_docker
+    image: etcd:alpine
