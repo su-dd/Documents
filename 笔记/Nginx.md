@@ -112,7 +112,7 @@ Tomcat服务器资源：
 - 重新加载配置文件：`nginx -s reload`
 - 检查配置文件语法：`nginx -t`
 - 执行`nginx`启动后就可以在主机地址上看到Nginx默认页面了。
-- `ps -aux | grep nginx`查看nginx进程
+- `ps -aux | grep nginx`查看 nginx进程
 
 ### 2.3 配置文件
 
@@ -226,6 +226,7 @@ http {
     include /etc/nginx/modules-enabled/*.conf;
     ```
 - `events`块： Nginx 服务器与用户的网络连接，常用的设置包括是否开启对多 worker process 下的网络连接进行序列化，是否允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个 worker process 可以同时支持的最大连接数等。
+  
     ```conf
     worker_connections 768; # 支持最大连接数
     ```

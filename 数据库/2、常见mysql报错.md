@@ -18,8 +18,6 @@ CREATE TABLE IF NOT EXISTS `table` (
 
 > SQL错误（1813）：Tablespace for table 'table' exists. Please DISCARD the tablespace before IMPORT.
 
-
-
 **我的问题的解决方案：**
 
 ```sql
@@ -27,14 +25,12 @@ ALTER TABLE tableName DISCARD TABLESPACE;
 DROP TABLE IF EXISTS tableName;
 ```
 
-
-
-
+## 问题：Error dropping database (can't rmdir '.\database', errno: 41)
 
 **报错：**
 
 > SQL错误（1010）：Error dropping database (can't rmdir '.\competitivemonitorspider_error', errno: 41)
 
-
-
 **我的解决方案：**
+
+找到mysql的data文件夹；删除对应的库即可。
